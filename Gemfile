@@ -13,6 +13,10 @@ group :default do
   gem 'sinatra'
   gem 'sinatra-contrib'
   gem 'sysrandom'
+  gem 'coffee-script'
+  gem 'therubyracer'
+  gem 'slim'
+  gem 'slim_lint'
 end
 
 group :test, :development do
