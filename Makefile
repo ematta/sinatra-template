@@ -2,10 +2,10 @@ SHELL = /bin/bash
 
 
 .PHONY: check
-check: install rubocop rufo
+check: install rubocop rufo slim-lint
 
 .PHONY: destroy
-	@gem list | cut -d" " -f1 | xargs gem uninstall -aIx
+	gem list | cut -d" " -f1 | xargs gem uninstall -aIx
 
 .PHONY: install
 install:
@@ -22,6 +22,10 @@ rubocop:
 .PHONY: rufo
 rufo:
 	@bundle exec rufo .
+
+.PHONY: slim-lint
+slim-lint:
+	@bundle exec slim-lint app/views
 
 .PHONY: serve
 serve:
