@@ -6,17 +6,17 @@ ruby '2.6.5'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 group :default do
+  gem 'coffee-script'
   gem 'puma'
   gem 'rack-protection'
   gem 'rake'
   gem 'sequel'
   gem 'sinatra'
   gem 'sinatra-contrib'
-  gem 'sysrandom'
-  gem 'coffee-script'
-  gem 'therubyracer'
   gem 'slim'
   gem 'slim_lint'
+  gem 'sysrandom'
+  gem 'therubyracer'
 end
 
 group :test, :development do
